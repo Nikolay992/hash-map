@@ -1,0 +1,73 @@
+{
+  "categories": [
+    {
+      "categoryId": "food",
+      "categoryInfo": {
+        "name": "Food Products",
+        "description": "Taste our fresh vegetables and fruite or enjoy our cheesecake!*<br/><i><small>*Subjected to availability</small></i>"
+      },
+      "products": [
+        {
+          "id": "apple",
+          "productName": "Apple &#x1F34E;",
+          "note": "Tasty fruit, available in in all seasons!",
+          "qty": 3
+        },
+        {
+          "id": "broccoli",
+          "productName": "Broccoli &#x1F966;",
+          "qty": 5
+        },
+        {
+          "id": "pineapple",
+          "productName": "Pineapple &#x1F34D;",
+          "qty": 1
+        },
+        {
+          "id": "cheesecake",
+          "productName": "Cheesecake &#x1F370;",
+          "note": "One of our best products, directly homemade by our granmother!",
+          "qty": 0,
+          "productRequests": 1
+        }
+      ]
+    },
+    {
+      "categoryId": "sport",
+      "categoryInfo": {
+        "name": "Sport Products",
+        "description": "Look up after our new arrivals and get ready for a new adventure!"
+      },
+      "products": [
+        {
+          "id": "ball",
+          "productName": "Ball &#x1F3D0;&#x1F3C0;&#x26BD; ",
+          "qty": 5,
+          "productInteractions": 3
+        },
+        {
+          "id": "swimsuit",
+          "productName": "Swimsuit &#x1FA71;&#x1FA72;",
+          "note": "Get your luggage ready and follow new trends for this summer!",
+          "qty": 4
+        },
+        {
+          "id": "bike",
+          "productName": "Bike &#x1F6B2;",
+          "qty": 1
+        },
+        {
+          "id": "tennisRacket",
+          "productName": "Tennis Racket &#x1F3BE;",
+          "qty": 7
+        },
+        {
+          "id": "skittles",
+          "productName": "Skittles &#x1F3B3;",
+          "qty": 2
+        }
+      ],
+      "views": 9
+    }
+  ]
+}

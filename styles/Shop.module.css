@@ -1,0 +1,48 @@
+.products {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  width: 100%;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.productInfo h4 {
+  margin-bottom: 0;
+}
+
+.productInfo span {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.productInteractions {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  text-align: end;
+  font-size: 12px;
+}
+
+.productInteractions button {
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 5px;
+  color: #0070f3;
+  font-size: 15px;
+}

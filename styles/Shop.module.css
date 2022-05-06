@@ -12,6 +12,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  flex-wrap: wrap;
   padding: 10px 0;
 }
 
@@ -25,6 +26,7 @@
   margin-bottom: 0;
 }
 
+.availablility,
 .productInfo span {
   font-size: 11px;
   font-style: italic;
@@ -38,11 +40,41 @@
   font-size: 12px;
 }
 
-.productInteractions button {
+.customButton,
+.product button {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
   padding: 10px 5px;
   color: #0070f3;
   font-size: 15px;
+}
+
+.admin.product {
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid red;
+}
+
+.adminButtons {
+  width: 100%;
+}
+
+.admin .product button {
+  color: black;
+}
+
+.editButton {
+  margin-right: auto;
+  min-width: 15%;
+  background-color: lightblue;
+}
+
+.updateButton {
+  background-color: #ffb84d;
+  margin: 0 10px;
+}
+
+.deleteButton {
+  background-color: rgb(230, 0, 0, 0.80);
 }

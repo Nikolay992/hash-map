@@ -1,0 +1,47 @@
+.modalContainer {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  height: 60%;
+  top: 130px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  border: solid 2px lightblue;
+}
+
+.close {
+  cursor: pointer;
+  display: block;
+  float: right;
+}
+
+.radioContainer {
+  margin-left: 20px;
+}
+
+.modalInputText {
+  margin: 30px 0 20px;
+}
+
+.modalInputText>div {
+  width: 100%;
+  padding: 5px 0
+}
+
+.modalInputText input {
+  width: 100%;
+}
+
+.button {
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  background-color: mediumseagreen;
+  font-size: 15px;
+  display: block;
+  float: right;
+  padding: 5px 10px;
+  margin-top: 25px;
+}

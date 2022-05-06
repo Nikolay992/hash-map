@@ -49,7 +49,7 @@
           "id": "swimsuit",
           "productName": "Swimsuit &#x1FA71;&#x1FA72;",
           "note": "Get your luggage ready and follow new trends for this summer!",
-          "qty": 4
+          "qty": "4"
         },
         {
           "id": "bike",
@@ -67,7 +67,7 @@
           "qty": 2
         }
       ],
-      "views": 9
+      "views": 27
     }
   ]
 }

@@ -30,7 +30,8 @@
           "qty": 0,
           "productRequests": 1
         }
-      ]
+      ],
+      "views": 2
     },
     {
       "categoryId": "sport",
@@ -42,14 +43,15 @@
         {
           "id": "ball",
           "productName": "Ball &#x1F3D0;&#x1F3C0;&#x26BD; ",
-          "qty": 5,
-          "productInteractions": 3
+          "qty": 4,
+          "productInteractions": 4
         },
         {
           "id": "swimsuit",
           "productName": "Swimsuit &#x1FA71;&#x1FA72;",
           "note": "Get your luggage ready and follow new trends for this summer!",
-          "qty": "4"
+          "qty": 3,
+          "productInteractions": 1
         },
         {
           "id": "bike",
@@ -67,7 +69,44 @@
           "qty": 2
         }
       ],
-      "views": 27
+      "views": 31
+    },
+    {
+      "categoryId": "drinks",
+      "categoryInfo": {
+        "name": "Alchool & Drinks",
+        "description": "White or Red? Beer or whisky? Don't choose, enjoy them all!"
+      },
+      "products": [
+        {
+          "id": "beer",
+          "productName": "Beer &#x1F37A;",
+          "qty": "12"
+        },
+        {
+          "id": "redWine",
+          "productName": "Red Wine &#x1F377;",
+          "note": "",
+          "qty": "4",
+          "noote": ""
+        },
+        {
+          "id": "Sparking",
+          "productName": "Sparkling Wine &#x1F37E;",
+          "note": "",
+          "qty": "2",
+          "noote": ""
+        },
+        {
+          "id": "jackDaniels",
+          "productName": "Jack Daniel's &#x1F943;",
+          "note": "",
+          "qty": 0,
+          "noote": "",
+          "productInteractions": 1
+        }
+      ],
+      "views": 3
     }
   ]
 }

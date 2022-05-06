@@ -9,7 +9,7 @@ export default function Products({ products, category }) {
     Object.values(products).map((categoryProducts) => {
       const { categoryInfo, categoryId, products } = categoryProducts;
       return (
-        <div key={`Category-${categoryId}`}>
+        <div className={styles.adminCategories} key={`Category-${categoryId}`}>
           <h3>{categoryInfo.name}</h3>
           <ul className={styles.products}>
             {

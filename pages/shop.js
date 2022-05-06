@@ -47,8 +47,8 @@ export default function Shop({ data }) {
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: categoryInfo.description || '' }} />
 
         <div className={styles.shopHeader}>
-          <button onClick={() => setCreateProduct(true)} className={styles.createProduct}>Add new product</button>
-          <p className={styles.userInOut}>
+          {categoryId === 'admin' && <button onClick={() => setCreateProduct(true)} className={styles.createProduct}>Add new product</button>}
+          <p className={`${styles.userInOut} ${categoryId !== 'admin' ? styles.mAuto : ''}`}>
             <u><a onClick={() => logoutUser()}>Logout &#x274C;</a></u>
           </p>
         </div>

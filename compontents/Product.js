@@ -3,12 +3,14 @@ import { useRouter } from 'next/router';
 
 import styles from '../styles/Shop.module.css';
 
-import { requestProduct, orderProduct, deleteProducts, updateProductQty } from '../utils/product';
+import { requestProduct, orderProduct, deleteProducts, updateProductQty, editProduct } from '../utils/product';
 
 export default function Product({ product, admin }) {
   const router = useRouter();
-  const { productName, qty, id } = product;
+  const { productName, qty, id, note = null } = product;
   const [productQty, setProductQty] = useState(qty);
+  const [productNameS, setProductNameS] = useState(productName);
+  const [description, setProductDescription] = useState(note);
 
   const addToCart = async () => {
     const order = await orderProduct(id);
@@ -21,20 +23,33 @@ export default function Product({ product, admin }) {
     setProductQty(res.newQty || 0)
   }
 
+  const handleEdit = async () => {
+    const productName = prompt('Insert new name');
+    const note = prompt('Insert new description');
+    if (productName !== '') {
+      const res = await editProduct(id, { productName, note });
+      setProductDescription(res.product.note || null)
+      setProductNameS(res.product.productName || '')
+      console.log('res', res);
+    } else {
+      alert("It's not possible to remove name");
+    }
+  }
+
   return (
     <li className={`${styles.product} ${admin ? styles.admin : ''}`}>
       <div className={styles.productInfo}>
-        <h4 dangerouslySetInnerHTML={{ __html: productName }} />
+        <h4 dangerouslySetInnerHTML={{ __html: productNameS }} />
         {
-          product["note"] && (
-            <span>{product["note"]}</span>
+          description && (
+            <span>{description}</span>
           )
         }
       </div>
       {
         admin ? (
           <div className={`${styles.product} ${styles.adminButtons}`}>
-            <button className={styles.editButton} onClick={() => alert('Actually WIP')}>Edit &#x270F;</button>
+            <button className={styles.editButton} onClick={() => handleEdit()}>Edit &#x270F;</button>
             {admin && <span className={styles.availablility}>Availability: {productQty}</span>}
             <button className={styles.updateButton} onClick={() => updateQuantity(id)}>Update quantity &#x1F504;</button>
             <button className={styles.deleteButton}

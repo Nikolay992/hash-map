@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import _ from 'lodash';
 
 import styles from '../styles/Modal.module.css'
 
@@ -16,7 +17,7 @@ export default function NewProductModal({ categories = [], callBack }) {
   const addNewProduct = async () => {
     if (selectedCategory && name && id && Number.isInteger(parseInt(qty)) && qty >= 0) {
       const productData = {
-        id,
+        id: _.camelize(id),
         category: selectedCategory,
         name,
         description,
@@ -48,7 +49,7 @@ export default function NewProductModal({ categories = [], callBack }) {
           categories.map((category) => {
             const { categoryInfo, categoryId } = category;
             return (
-              <div>
+              <div key={`Modal Radio - ${categoryId}`}>
                 - {categoryInfo.name} <input type="radio" value={categoryId} name="gender" />
               </div>
             )

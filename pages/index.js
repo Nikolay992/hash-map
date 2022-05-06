@@ -14,7 +14,7 @@ export default function Home({ data }) {
   const loginUser = () => {
     const username = prompt("Insert your username");
     const password = prompt("Insert your password");
-    setUser(checkUserLogin({ username, password } || 'error'));
+    setUser(checkUserLogin({ username, password }) || false);
   }
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Home({ data }) {
         <p className={styles.userInOut}>
           Login <u><a onClick={() => loginUser()}>Here</a></u>
           <br />
-          {user === 'error' && (<span className={styles.errorText}>An error has been occured, check your data and retry!</span>)}
+          {user === false && (<span className={styles.errorText}>An error has been occured, check your data and retry!</span>)}
         </p>
 
       </main>

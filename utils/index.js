@@ -18,6 +18,7 @@ export const getAuthUsers = () => {
   }, {
     user: 'admin',
     password: 'superuser!2022!',
+    category: 'admin'
   }];
 
   return users;

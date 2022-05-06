@@ -4,7 +4,7 @@ export const getAuthUsers = () => {
     password: 'gym1234!',
     category: 'sport'
   }, {
-    user: 'GreatesFootballer',
+    user: 'GreatestFootballer',
     password: 'Best-123',
     category: 'sport'
   }, {
